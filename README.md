@@ -3,7 +3,7 @@
 MA 705, Professor Luke Cherveny
 Data Science
 
-In this project, I analyze the most popular songs on Spotify from the last decade (2010-2019) and visualized their music elements and genre to see how they trend over the years. I also looked at the popular artists on Spoitfy who won the American Music Award for every year. 
+In this project, I analyze the most popular songs on Spotify from the last decade (2010-2019) and visualized their music elements and genre to see how they trend over the years. I also looked at the popular artists on Spotify who won the American Music Award for every year. 
 
 In this dashboard you will be able to:
 Select any year from 2010-2019 and see a/The top 10 most popular songs and artists on Spotify, and b/Spotify artists (if any) who won the American Music Award. 
