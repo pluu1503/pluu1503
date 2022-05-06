@@ -21,11 +21,11 @@ You can choose to run one of the 2 files below:<br>
 The pluu_maincode.py is the Python file.<br>
 The Phung-Luu-Shopify-Final-May (1).ipynb is the Jupyter Notebook file. <br>
 
-Spotify - All Time Top 2000s Mega Dataset<br>
-https://www.kaggle.com/datasets/iamsumat/spotify-top-2000s-mega-dataset?fbclid=IwAR28Vxlh8gipbYTvQe5vrd7J06ddR18PFuTnx4kGvdyBN4qZ0sdLZm0L-eU
+Kaggle: Spotify - All Time Top 2000s Mega Dataset<br>
+https://bit.ly/3vH1plg
 
 American Music Award for Artist of the Year<br>
-https://en.wikipedia.org/wiki/American_Music_Award_for_Artist_of_the_Year?fbclid=IwAR2GK6nYQwWIf4DzgGl6-6vm1SewuYQYBUeMbP3vQCXedK6qskfHKiQS5gc
+Wikipedia: https://bit.ly/3MP6CwR
 
 C/STEPS:<br>
 Step 1: Downloading Spotify data from Kaggle and importing to notebook.<br>
