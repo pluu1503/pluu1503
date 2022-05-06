@@ -18,8 +18,8 @@ You will need to import 2 .csv files (both attached in the project):<br>
 'Spotify-2000.csv','to_match_youtube2.csv'<br>
 
 You can choose to run one of the 2 files below:<br>
-The pluu_maincode.py is the Python file.<br>
-The Phung-Luu-Shopify-Final-May (1).ipynb is the Jupyter Notebook file. <br>
+* pluu_maincode.py is the Python file.<br>
+* Phung_Luu_MA705_Spotify_Dashboard.ipynb is the Jupyter Notebook file. <br>
 
 Kaggle: Spotify - All Time Top 2000s Mega Dataset<br>
 https://bit.ly/3vH1plg
