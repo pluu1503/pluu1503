@@ -76,9 +76,10 @@ spotify_2010_pie_component_df = spotify_2010[['Title','Beats Per Minute (BPM)', 
        'Liveness', 'Valence', 'Length (Duration)', 'Acousticness',
        'Speechiness']]
 
+
+
 #########################################
 #starting the dashboard
-
 stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 ### pandas dataframe to html table
@@ -114,7 +115,7 @@ genre_trends_fig.update_layout(height=400,legend={'itemclick':False},
             color='#000000')))
 
 
-#########################################
+
 #app layout 
 
 app.layout = html.Div([
@@ -171,7 +172,7 @@ app.layout = html.Div([
                                                                                                  ,'whiteSpace': 'pre-line','display':'inline-block'
                                                                                                  ,'font-size':'20px','font':'Arial',"font-weight": "bold"
                                                                                                 ,'font-color':'#000000'})
-                    , html.Div(dash_table.DataTable(
+                    , html.Div(children=[html.Div(dash_table.DataTable(
                         id="table_url",
                         columns=[
                             {"name": "Year", "id": "Year", 'type':'numeric'},
@@ -180,10 +181,10 @@ app.layout = html.Div([
                             {"name": "Link", "id": "Link", 'type':'text', "presentation": "markdown"}],
                         data=ama_with_links_df.to_dict('records'),
                         markdown_options={"html": True},
-                        style_data={'whiteSpace': 'normal','height': 'auto'}
+                        style_data={'whiteSpace': 'normal','height': 'auto',}
                         ,fill_width=False 
                        ),style={'margin-top': '-4vw','margin-right': '3vw','whiteSpace': 'pre-line','display':'inline-block'}
-                              )])
+                              )])])
     
 # Select Arrist Name to See Most Popular Songs
     ,html.Div(children=
@@ -195,9 +196,9 @@ app.layout = html.Div([
                                                                                         'align-items': 'center','justify-content': 'center','width': 600 }
             )])
                ,html.Div(
-                   [html.H4('Select A Song to See Its Attributes',style={'float': 'right','color': 'midnightblue',"font-weight": "bold",'width': 600,'margin-top': '10vw' })
-                    ,html.Div(dcc.Dropdown(song_list,'Dancing On My Own',id = 'song_component_dropdown',style={'margin-left': '1.5vw', 'margin-right': '5vw','width': 600 }) ,style=dict(width='100%'))
-                    ,html.Div(dcc.Graph(id='component_pie_id',style={'margin-left': '1.5vw', 'margin-right': '5vw' })),
+                   [html.H4('Select A Song to See Its Attributes',style={'color': 'midnightblue',"font-weight": "bold",'width': 600,'margin-top': '10vw','margin-left': '3vw','display':'inline-block' })
+                    ,html.Div(dcc.Dropdown(song_list,'Dancing On My Own',id = 'song_component_dropdown',style={ 'margin-left': '1.5vw','width': 600 ,'display':'inline-block' }) ,style=dict(width='100%'))
+                    ,html.Div(dcc.Graph(id='component_pie_id',style={ 'margin-left': '1.5vw','display':'inline-block' })),
         ],style={'margin-top': '-4vw','whiteSpace': 'pre-line','display':'inline-block'}
                )])   
 
@@ -247,12 +248,12 @@ app.layout = html.Div([
       May 2022, Phung Luu.
     
     ''', style={'margin-left': '3vw', 'margin-right': '3vw','whiteSpace': 'pre-line' })
-    ,html.Br()
+,html.Br()
    
 ])
 
 
-#########################################
+
 #input and output for top 10 spotify songs scatterplot 
 
 @app.callback(
@@ -376,5 +377,6 @@ def pie_song_component_function(song_name):
 
 if __name__ == '__main__':
     app.run_server(debug=True,use_reloader=False)
+    
     
     
