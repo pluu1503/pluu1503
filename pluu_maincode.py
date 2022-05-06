@@ -187,7 +187,7 @@ app.layout = html.Div([
              style={'textAlign': 'left','color': 'midnightblue',"font-weight": "bold", 'margin-left': '3vw', 'margin-right': '3vw','margin-top': '10vw','width': 600})      
                ,html.Div(
               [dcc.Dropdown(artist_list,'Ed Sheeran',id='checklist_artist',style={'margin-left': '1.5vw', 'margin-right': '5vw','width': 600 }),
-               dcc.Graph(figure=fig_search,id='fig_search_id',style={'textAlign': 'center','margin-left': '3vw', 'margin-top': '1vw',
+               dcc.Graph(id='fig_search_id',style={'textAlign': 'center','margin-left': '3vw', 'margin-top': '1vw',
                                                                                         'align-items': 'center','justify-content': 'center','width': 600 }
             )])
                ,html.Div(
@@ -212,7 +212,7 @@ app.layout = html.Div([
        'Popularity'],
     ['Beats Per Minute (BPM)', 'Energy','Valence'],
     multi=True,id = 'dropdown_line',style={'whiteSpace': 'pre-line','textAlign': 'left','margin-left': '1vw', 'margin-right': '5vw'})
-    ,dcc.Graph(figure=line_fig,id='line_fig_id')
+    ,dcc.Graph(id='line_fig_id')
 
     
     ,dcc.Markdown('''
@@ -235,9 +235,16 @@ app.layout = html.Div([
     ,html.Br()
     
     ,dcc.Graph(figure=genre_trends_fig,id='genre_trends_fig_id')
-
-
-
+    
+    ,html.Br()
+    ,html.Br()
+    
+    ,dcc.Markdown('''
+      May 2022, Phung Luu.
+    
+    ''', style={'margin-left': '3vw', 'margin-right': '3vw','whiteSpace': 'pre-line' })
+    ,html.Br()
+   
 ])
 
 
@@ -344,16 +351,6 @@ def update_line(attribute_list):
     line_fig.update_traces(mode="markers+lines")
     return line_fig
 
-
-
-# @app.callback(
-#     Output('pie_id','figure'), 
-#     Input('checklist', 'value')
-# )
-
-# def pie_function(year):
-#     fig_pie = px.pie(pie_df[pie_df['Year']==year], values='Title', names='Top Genre', title='Songs Per Genre')
-#     return fig_pie
 
 #input and output for song components/attribute 
 
