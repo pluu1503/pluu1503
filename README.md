@@ -12,6 +12,15 @@ Select a song to see its elements/attributes.
 Select song attributes to see how their trend over the years.
 See the top 3 music trends in the past decade.
 
+You will need to import 2 .csv files (both attached in the project):
+'Spotify-2000.csv','to_match_youtube2.csv'
+
+You can choose to run one of the 2 files below:
+The pluu_maincode.py is the Python file.
+The Phung-Luu-Shopify-Final-May (1).ipynb is the Jupyter Notebook file.
+
+Please let me know if you have any questions. Your class is the best! Thank you!
+
 Enjoy!
 Phung Luu
 
