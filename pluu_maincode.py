@@ -13,6 +13,8 @@ from dash import Dash, dash_table
 import plotly.graph_objects as go
 from pandas.io.html import read_html
 
+
+#########################################
 #importing files
 spotify=pd.read_csv('Spotify-2000.csv')
 
@@ -74,6 +76,8 @@ spotify_2010_pie_component_df = spotify_2010[['Title','Beats Per Minute (BPM)', 
        'Liveness', 'Valence', 'Length (Duration)', 'Acousticness',
        'Speechiness']]
 
+#########################################
+#starting the dashboard
 
 stylesheet = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -110,7 +114,7 @@ genre_trends_fig.update_layout(height=400,legend={'itemclick':False},
             color='#000000')))
 
 
-
+#########################################
 #app layout 
 
 app.layout = html.Div([
@@ -248,7 +252,7 @@ app.layout = html.Div([
 ])
 
 
-
+#########################################
 #input and output for top 10 spotify songs scatterplot 
 
 @app.callback(
